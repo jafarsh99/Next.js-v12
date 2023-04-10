@@ -1,14 +1,8 @@
 import { getAllPosts } from "../lib/helper";
-import { useRouter } from 'next/router'
 
 export default function Post({ post }) {
-  const router = useRouter();
-  const { id } = router.query;
-  console.log(id);
-
   return (
     <article>
-      <button onClick={() => router.push("/posts/user")}>post</button>
       {post.map((p) => (
         <div key={p.id}>
           <h1>{p.id}</h1>
@@ -20,8 +14,8 @@ export default function Post({ post }) {
   );
 }
 
-export async function getStaticProps({ params }) {
-  const { id } = params;
+export async function getStaticProps({params}) {
+    const {id} = params;
   const post = getAllPosts(id);
 
   return {
@@ -32,7 +26,7 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   const posts = getAllPosts();
 
-  const paths = posts.map((post) => ({
+  const paths = posts.map(post => ({
     params: { id: post.id.toString() },
   }));
 
