@@ -1,8 +1,19 @@
 import { getAllPosts } from "../lib/helper";
+import {useRouter} from 'next/router'
 
 export default function Post({ post }) {
+
+  const router = useRouter()
+  const {id } = router.query
+  console.log(id);
+
+
+
   return (
     <article>
+    <button onClick={ () => router.push('/posts/user')}>
+    post
+    </button>
       {post.map((p) => (
         <div key={p.id}>
           <h1>{p.id}</h1>
@@ -35,3 +46,5 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
+
+//post/[id]/[comment].js
