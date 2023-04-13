@@ -18,4 +18,8 @@ export const navLinks = [{
     name: "Contact us", 
     path: "#contact" 
 },
+{
+    name: "QOD",
+    path: '/posts/quote'
+}
 ];
