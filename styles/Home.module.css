@@ -2,6 +2,18 @@
   padding: 0 2rem;
 }
 
+.goto {
+  border: 2px solid black;
+  width: 400px;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.goto:hover {
+  background-color: rgb(180, 180, 180);
+}
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;

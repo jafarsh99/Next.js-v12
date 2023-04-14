@@ -5,3 +5,54 @@
     flex-direction: column;
     justify-content: center;
 }
+
+.container footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: grey;
+    color: white;
+    text-align: center;
+    display: grid;
+    align-content: center;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.containerNav{
+    width: 150px;
+    height: 50px;
+    margin: 0;
+    background: grey;
+    color: whitesmoke;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.containerNav ul {
+    display: flex;
+    list-style: none;
+    gap: 1em;
+    margin: auto;
+    padding: 10px 10px 10px 30px;
+}
+
+.containerNav ul li {
+    float: left;
+}
+
+.containerNav ul li:hover {
+    color: black;
+}
+
+.containerNav Link {
+    display: flex;
+    
+}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./api.module.css";
 
+
 const RandomQuote = () => {
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
@@ -19,6 +20,7 @@ const RandomQuote = () => {
           setAuthor(data.author);
           setIsLoading(false);
           setButtonText("Another Quote");
+          console.log(data);
         })
         .catch(() => {
           setIsLoading(false);
@@ -32,7 +34,15 @@ const RandomQuote = () => {
     <div>
       <div className={styles.container}>
         {isLoading ? (
+          <>
+          <div className={styles.loading}>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
           <p>Looking for relatable one for you...</p>
+          </>
         ) : (
           <>
             {<h3>{quote}</h3>}

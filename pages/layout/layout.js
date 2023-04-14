@@ -21,14 +21,16 @@ export default function Layout({ children, home }) {
 
 function Home_nav() {
   return (
-    <nav>
+    <nav className={styles.nav}>
       {navLinks.map((link, i) => {
         return (
-          <ul key={link.name}>
-            <Link href={{ pathname: link.path, query: { id: "1" } }}>
+          <div className={styles.containerNav}>
+          <ul key={link.name} className={styles.ulLink}>
+            <Link href={{ pathname: link.path, query: { id: "1" } }} className={styles.link}>
               <li>{link.name}</li>
             </Link>
           </ul>
+          </div>
         );
       })}
     </nav>

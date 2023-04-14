@@ -9,8 +9,8 @@ export default function Home() {
 
       <Layout home>
         <Link href='/posts/first-post'>
-          <h1>
-            Go to First Post
+          <h1 className={styles.goto}>
+            Go to First Post 👉
           </h1>
         </Link>
       </Layout>

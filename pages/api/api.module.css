@@ -10,6 +10,7 @@
     width: 600px;
     border: 2px solid burlywood;
     border-radius: 10px;
+    align-items: center;
 }
 
 .button{
@@ -26,3 +27,54 @@
 .button:hover{
     background-color: goldenrod;
 }
+
+.loading {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+  }
+  
+  .loading div {
+    position: absolute;
+    top: 27px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: goldenrod;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loading div:nth-child(1) {
+    left: 6px;
+    animation: loading 0.9s infinite;
+  }
+  
+  .loading div:nth-child(2) {
+    left: 26px;
+    animation: loading 0.9s infinite;
+  }
+  
+  .loading div:nth-child(3) {
+    left: 46px;
+    animation: loading 0.9s infinite;
+  }
+  
+  .loading div:nth-child(4) {
+    left: 66px;
+    animation: loading 0.9s infinite;
+  }
+  
+  @keyframes loading {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+  
