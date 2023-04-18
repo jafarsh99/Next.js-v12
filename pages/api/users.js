@@ -6,7 +6,8 @@ import UserModel from "../database/schema";
 
 export default function get_Users(req, res) {
   res.status(200).json([{ id: 1, name: "Sherlock" },{id:2,name:'Holmes'}]);
-  // main().catch((error) => console.error(error));
+  
+  main().catch((error) => console.error(error));
 
   // const { method } = req;
 
